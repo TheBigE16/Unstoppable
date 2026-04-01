@@ -2743,7 +2743,7 @@ function generateAllSections() {
     "Z",
   ];
 
-  const filesByChar = {};
+   const filesByChar = {};
   allChars.forEach((char) => {
     filesByChar[char] = [];
   });
@@ -2789,7 +2789,18 @@ function generateAllSections() {
           const normalized = normalizeFileName(file);
           const encoded = encodeURIComponent(normalized);
 
-          
+          fetch(
+            `https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/${encoded}?t=${Date.now()}`,
+          )
+            .then((response) => response.text())
+            .then((text) => {
+              const newWin = window.open("about:blank", "_blank");
+              if (newWin) {
+                newWin.document.open();
+                newWin.document.write(text);
+                newWin.document.close();
+              }
+            });
         };
         btn.style.width = "100%";
         btn.style.height = "100%";
