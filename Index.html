@@ -7,41 +7,6 @@
     <title>Unstoppable Games</title>
     <link id="site-favicon" rel="icon" type="image/png"
         href="https://lh3.googleusercontent.com/ogw/AF2bZyh3UKNu89DX0qdwzETKRbgXaiodeSI9U1nD3iMS4iDvmrE=s64-c-mo    ">
-    <script>
-    const GAME_LIST = [
-    // { name: "My Custom Game", url: "https://example.com/game" },
-    { name: "100 Rooms of Enemies", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/cl100RoomsOfEnemies.html" },
-    { name: "2048", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/cl2048.html" },
-    { name: "3d Dash", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/cl3dash.html" },
-    { name: "3d Dash Editor", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/cl3dasheditor.html" },
-    { name: "Fruit Ninja", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clfruitninja.html" },
-    { name: "Dragon Ball Z: The Legacy of Goku", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clDragonBallZTheLegacyofGoku.html" },    
-    { name: "FNAF 1", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clFNAF.html" },
-    { name: "FNAF 2", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clFNAF2.html" },
-    { name: "FNAF 3", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clFNAF3.html" },
-    { name: "FNAF 4", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clFNAF4.html" },
-    { name: "FIFA 11", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clFIFA11.html" },
-    { name: "FIFA 10", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clFIFA10.html" },
-    { name: "Learn to Fly 3", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clLearnToFly3Debug.html" },
-    { name: "Super Mario 64", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clSM64Land.html" },
-    { name: "Quantum Clicker", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clQuantumClicker.html" },
-    { name: "Sonic the Hedgehog", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clSegaSonicTheHedgehog.html" },
-    //{ name: "Angry Birds", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clangrybirds.html" },
-    { name: "The Backrooms: Survival", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clbackrooms.html" },
-    { name: "Football League", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/claxisfootballleague.html" },
-    { name: "Babel Tower", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clbabeltower.html" },
-    { name: "Bacon May Die", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clbaconmaydie.html" },
-    { name: "Bad Time Simulator", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clbadtimesim.html" },
-    { name: "Baldi's Basics", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clbaldisbasics.html" },
-    { name: "99 Nights in the Forest", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/cl99nightsitf.html" },
-    { name: "A Dance Of Fire And Ice", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clADOFAI.html" },
-    { name: "NBA Jam", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clNBAjam.html" },
-    { name: "Five Nights at Epstiens", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clfivenightsatepsteins.html" },
-    { name: "BitLife", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clbitlife.html" },
-    { name: "Flappy Bird", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clflappybird.html" },
-
-];
-</script>
     <style>
         /* Red & black theme inspired by provided design; preserves original layout behavior */
         :root {
@@ -569,203 +534,6 @@
             border-color: rgba(255, 200, 0, 0.5);
             background: rgba(255, 200, 0, 0.08);
         }
-
-        /* IFRAME GAME OVERLAY */
-        #gameOverlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-            background: #0b0b0b;
-            flex-direction: row;
-        }
-
-        #gameOverlay.active {
-            display: flex;
-        }
-
-        #gameSidebar {
-            width: 76px;
-            min-width: 76px;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.2));
-            backdrop-filter: blur(6px);
-            border-right: 2px solid rgba(30,144,255,0.08);
-            padding: 14px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            overflow-y: auto;
-            box-shadow: 4px 0 20px rgba(0,0,0,0.6);
-        }
-
-        #backBtn {
-            background: rgba(30,144,255,0.12);
-            border: 2px solid rgba(30,144,255,0.35);
-            color: var(--accent);
-            font-size: 18px;
-            font-weight: 900;
-            width: 46px;
-            height: 42px;
-            border-radius: 8px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.15s;
-            flex-shrink: 0;
-            line-height: 1;
-        }
-
-        #backBtn:hover {
-            background: rgba(30,144,255,0.25);
-            transform: translateX(-2px);
-        }
-
-        #gameSidebarDivider {
-            width: 100%;
-            height: 2px;
-            background: rgba(30,144,255,0.1);
-            border-radius: 2px;
-            flex-shrink: 0;
-        }
-
-        .game-sidebar-btn {
-            background: transparent;
-            border: 2px solid transparent;
-            color: var(--muted);
-            font-weight: 800;
-            font-size: 13px;
-            padding: 8px;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 46px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.15s;
-        }
-
-        .game-sidebar-btn.empty {
-            opacity: 0.18;
-            cursor: default;
-        }
-
-        .game-sidebar-btn:not(.empty):hover {
-            background: rgba(30,144,255,0.08);
-            color: var(--accent);
-        }
-
-        #gameSearchSidebar {
-            width: 260px;
-            min-width: 260px;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.2));
-            backdrop-filter: blur(6px);
-            border-left: 2px solid rgba(30,144,255,0.06);
-            padding: 14px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            overflow: hidden;
-            box-shadow: -4px 0 20px rgba(0,0,0,0.4);
-            order: 3;
-        }
-
-        #gameSearchInput {
-            width: 100%;
-            padding: 10px;
-            border-radius: 8px;
-            border: 2px solid rgba(30,144,255,0.18);
-            background: #0b0b0b;
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-        #gameSearchResults {
-            overflow-y: auto;
-            flex: 1;
-        }
-
-        .game-search-item {
-            padding: 8px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 13px;
-            color: var(--muted);
-        }
-
-        .game-search-item:hover {
-            background: rgba(30,144,255,0.08);
-            color: var(--accent);
-        }
-
-        #gameIframeWrap {
-            flex: 1;
-            height: 100%;
-            position: relative;
-            background: #000;
-            order: 2;
-        }
-
-        #gameIframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-            opacity: 0;
-            transition: opacity 0.25s ease;
-        }
-
-        #gameLoading {
-            display: none;
-            position: absolute;
-            inset: 0;
-            align-items: center;
-            justify-content: center;
-            background: #0b0b0b;
-            z-index: 2;
-        }
-
-        .game-loading-inner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .game-spinner {
-            width: 40px;
-            height: 40px;
-            border: 3px solid rgba(30,144,255,0.15);
-            border-top-color: var(--accent);
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        .game-loading-text {
-            font-size: 13px;
-            font-weight: 700;
-            color: rgba(255,255,255,0.4);
-            letter-spacing: 0.5px;
-        }
-
-        #gameTitle {
-            font-size: 11px;
-            font-weight: 700;
-            color: rgba(255,255,255,0.35);
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.6px;
-            word-break: break-all;
-            padding: 0 2px;
-        }
     </style>
 
     <style>
@@ -775,39 +543,47 @@
         }
     </style>
 
+    <!-- Game list with direct URLs -->
+    <script>
+    const GAME_LIST = [
+    // { name: "My Custom Game", url: "https://example.com/game" },
+    { name: "100 Rooms of Enemies", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/cl100RoomsOfEnemies.html" },
+    { name: "2048", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/cl2048.html" },
+    { name: "3d Dash", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/cl3dash.html" },
+    { name: "3d Dash Editor", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/cl3dasheditor.html" },
+    { name: "Fruit Ninja", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clfruitninja.html" },
+    { name: "Dragon Ball Z: The Legacy of Goku", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clDragonBallZTheLegacyofGoku.html" },    
+    { name: "FNAF 1", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clFNAF.html" },
+    { name: "FNAF 2", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clFNAF2.html" },
+    { name: "FNAF 3", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clFNAF3.html" },
+    { name: "FNAF 4", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clFNAF4.html" },
+    { name: "FIFA 11", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clFIFA11.html" },
+    { name: "FIFA 10", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clFIFA10.html" },
+    { name: "Learn to Fly 3", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clLearnToFly3Debug.html" },
+    { name: "Super Mario 64", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clSM64Land.html" },
+    { name: "Quantum Clicker", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clQuantumClicker.html" },
+    { name: "Sonic the Hedgehog", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clSegaSonicTheHedgehog.html" },
+    //{ name: "Angry Birds", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clangrybirds.html" },
+    { name: "The Backrooms: Survival", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clbackrooms.html" },
+    { name: "Football League", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/claxisfootballleague.html" },
+    { name: "Babel Tower", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clbabeltower.html" },
+    { name: "Bacon May Die", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clbaconmaydie.html" },
+    { name: "Bad Time Simulator", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clbadtimesim.html" },
+    { name: "Baldi's Basics", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clbaldisbasics.html" },
+    { name: "99 Nights in the Forest", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/cl99nightsitf.html" },
+    { name: "A Dance Of Fire And Ice", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clADOFAI.html" },
+    { name: "NBA Jam", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clNBAjam.html" },
+    { name: "Five Nights at Epstiens", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clfivenightsatepsteins.html" },
+    { name: "BitLife", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clbitlife.html" },
+    { name: "Flappy Bird", url: "https://raw.githubusercontent.com/TheBigE16/Unstoppable/refs/heads/main/UGS-Files/clflappybird.html" },
+
+];
+</script>
+
 </head>
 
 <body>
 
-
-    <!-- GAME OVERLAY -->
-    <div id="gameOverlay">
-        <!-- Left letter nav sidebar -->
-        <div id="gameSidebar">
-            <button id="backBtn" title="Back to games" onclick="closeGame()">&#8592;</button>
-            <div id="gameSidebarDivider"></div>
-            <div id="gameSidebarLetters"></div>
-        </div>
-        <!-- Game area -->
-        <div id="gameIframeWrap">
-            <div id="gameLoading">
-                <div class="game-loading-inner">
-                    <div class="game-spinner"></div>
-                    <div class="game-loading-text">Loading game…</div>
-                    <div class="game-loading-text">Note: This might sometimes take 45 - 60 seconds</div>
-                </div>
-            </div>
-            <iframe id="gameIframe" sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups allow-modals"></iframe>
-        </div>
-        <!-- Right search sidebar -->
-        <div id="gameSearchSidebar">
-            <div id="gameTitle"></div>
-            <input id="gameSearchInput" class="search-input" placeholder="Search games..." oninput="onGameSearch(this.value)">
-            <button class="disguise-btn" onclick="disguiseSite()">Disguise Site</button>
-            <button class="disguise-btn" onclick="hideSite()">Hide Site</button>
-            <p class="disguise-btn"></p>
-        </div>
-    </div>
 
     <!-- Sidebar and content (original functionality preserved) -->
     <div class="sidebar" id="sidebar"></div>
@@ -816,6 +592,9 @@
         <input class="search-input" id="searchBox" placeholder="Search games...">
         <button class="disguise-btn" onclick="disguiseSite()">Disguise Site</button>
         <button class="disguise-btn" onclick="hideSite()">Hide Site</button>
+
+
+
         <div class="search-results" id="searchResults"></div>
     </div>
 
@@ -895,6 +674,15 @@
     <script>
         const files = [];
 
+        // Build a display-name → URL map from list.js GAME_LIST
+        const gameUrlMap = {};
+        if (typeof GAME_LIST !== 'undefined') {
+            GAME_LIST.forEach(entry => {
+                gameUrlMap[entry.name.toLowerCase()] = entry.url;
+                files.push(entry.name);
+            });
+        }
+
         function generateAllSections() {
             const allChars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
                 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
@@ -906,20 +694,11 @@
             });
 
             files.forEach(file => {
-                const lower = file.toLowerCase();
-                let cleanName = file;
-                // If it's a legacy file starting with 'cl', strip it to sort properly
-                if (lower.startsWith('cl')) {
-                    cleanName = file.substring(2);
-                }
-
-                if (cleanName.length > 0) {
-                    const firstChar = cleanName[0].toUpperCase();
-                    // Slot it into the correct A-Z or 0-9 bucket
+                if (file.length > 0) {
+                    const firstChar = file[0].toUpperCase();
                     if (filesByChar[firstChar]) {
                         filesByChar[firstChar].push(file);
                     } else {
-                        // Fallback: put it in the #0 bucket if it starts with a symbol
                         if (filesByChar['0']) filesByChar['0'].push(file);
                     }
                 }
@@ -949,13 +728,23 @@
 
                         const playBtn = document.createElement('input');
                         playBtn.type = 'button';
-                        playBtn.value = file.replace(/^cl/i, '');
+                        playBtn.value = file;
                         playBtn.style.flex = '1';
 
                         playBtn.onclick = () => {
                             addXP(xpPerGame());
                             recordRecentGame(file);
-                            launchGame(file);
+                            const url = getGameDownloadUrl(file);
+                            fetch(url)
+                                .then(response => response.text())
+                                .then(text => {
+                                    const newWin = window.open("about:blank", "_blank");
+                                    if (newWin) {
+                                        newWin.document.open();
+                                        newWin.document.write(text);
+                                        newWin.document.close();
+                                    }
+                                });
                         };
 
                         const downloadBtn = document.createElement('button');
@@ -1047,50 +836,13 @@
             });
         }
 
-        // ── Game URL lookup map (populated from list.js) ──────────────────
-        // Maps lowercased game name → full URL
-        const gameUrlMap = {};
-
         function getGameDownloadUrl(name) {
-            return gameUrlMap[name.toLowerCase()] || gameUrlMap[name] || null;
-        }
-
-        function showSyncBadge(text, color) {
-            let badge = document.getElementById('sync-badge');
-            if (!badge) {
-                badge = document.createElement('div');
-                badge.id = 'sync-badge';
-                Object.assign(badge.style, {
-                    marginTop: '12px', padding: '6px 8px', borderRadius: '6px',
-                    fontSize: '11px', fontWeight: '700', textAlign: 'center',
-                    lineHeight: '1.4', border: '1px solid rgba(255,255,255,0.08)',
-                    transition: 'opacity 0.3s'
-                });
-                document.getElementById('sidebar').appendChild(badge);
-            }
-            badge.style.background = color;
-            badge.style.color = '#fff';
-            badge.textContent = text;
+            return gameUrlMap[name.toLowerCase()] || null;
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            // GAME_LIST is defined in list.js, loaded via <script> tag in <head>
-            if (typeof GAME_LIST === 'undefined' || !Array.isArray(GAME_LIST)) {
-                showSyncBadge('⚠ list.js\nnot found', 'rgba(255,80,0,0.4)');
-                console.error('GAME_LIST not defined. Make sure list.js is loaded before Index.html.');
-                return;
-            }
-
-            GAME_LIST.forEach(entry => {
-                if (!entry.name || !entry.url) return;
-                // Store by lowercase name for lookup
-                gameUrlMap[entry.name.toLowerCase()] = entry.url;
-                files.push(entry.name);
-            });
-
             files.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
             generateAllSections();
-            showSyncBadge(`✓ ${files.length} games`, 'rgba(30,144,255,0.32)');
         });
 
         function openCustomFile() {
@@ -1172,11 +924,17 @@
             files.filter(f => f.toLowerCase().includes(q)).slice(0, 100).forEach(file => {
                 const div = document.createElement('div');
                 div.className = 'search-item';
-                div.textContent = file.replace(/^cl/i, '');
+                div.textContent = file;
                 div.onclick = () => {
                     if (typeof addXP === 'function') addXP(xpPerGame());
                     recordRecentGame(file);
-                    launchGame(file);
+                    const url = getGameDownloadUrl(file);
+                    fetch(url)
+                        .then(r => r.text())
+                        .then(t => {
+                            const w = window.open('about:blank', '_blank');
+                            if (w) { w.document.open(); w.document.write(t); w.document.close(); }
+                        });
                 };
                 searchResults.appendChild(div);
             });
@@ -1379,12 +1137,18 @@
                 card.className = 'pinned-card';
 
                 const label = document.createElement('span');
-                label.textContent = '❤️ ' + file.replace(/^cl/i, '');
+                label.textContent = '❤️ ' + file;
                 label.style.flex = '1';
                 label.style.cursor = 'pointer';
                 label.onclick = () => {
                     recordRecentGame(file);
-                    launchGame(file);
+                    const url = getGameDownloadUrl(file);
+                    fetch(url)
+                        .then(r => r.text())
+                        .then(t => {
+                            const w = window.open('about:blank', '_blank');
+                            if (w) { w.document.open(); w.document.write(t); w.document.close(); }
+                        });
                 };
 
                 const unpinBtn = document.createElement('button');
@@ -1401,142 +1165,6 @@
                 container.appendChild(card);
             });
         }
-
-        /* ================= GAME LAUNCHER (fetch → srcdoc) ================= */
-
-        function launchGame(file) {
-            const url = getGameDownloadUrl(file);
-            if (!url) {
-                console.error('No URL found for game:', file);
-                return;
-            }
-
-            const overlay  = document.getElementById('gameOverlay');
-            const iframe   = document.getElementById('gameIframe');
-            const titleEl  = document.getElementById('gameTitle');
-            const loadEl   = document.getElementById('gameLoading');
-
-            // Show overlay immediately with loading state
-            titleEl.textContent = file.replace(/^cl/i, '');
-            iframe.removeAttribute('srcdoc');
-            iframe.style.opacity = '0';
-            if (loadEl) loadEl.style.display = 'flex';
-            overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            populateGameSidebarLetters();
-
-            // Fetch the HTML and inject via srcdoc — no blob URLs, no about:blank
-            fetch(url)
-                .then(r => {
-                    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-                    return r.text();
-                })
-                .then(html => {
-                    iframe.srcdoc = html;
-                    iframe.onload = () => {
-                        if (loadEl) loadEl.style.display = 'none';
-                        iframe.style.opacity = '1';
-                        iframe.onload = null;
-                    };
-                })
-                .catch(err => {
-                    console.error('Failed to load game:', err);
-                    if (loadEl) {
-                        loadEl.innerHTML = '<div style="color:rgba(255,80,80,0.8);font-weight:700;text-align:center">⚠ Failed to load game<br><small style="font-weight:400;opacity:0.6">' + err.message + '</small></div>';
-                    }
-                });
-        }
-
-        function closeGame() {
-            const overlay = document.getElementById('gameOverlay');
-            const iframe  = document.getElementById('gameIframe');
-            const loadEl  = document.getElementById('gameLoading');
-
-            overlay.classList.remove('active');
-            iframe.removeAttribute('srcdoc');
-            iframe.style.opacity = '0';
-            if (loadEl) loadEl.style.display = 'none';
-            document.body.style.overflow = '';
-            document.getElementById('gameSearchInput').value = '';
-            document.getElementById('gameSearchResults').innerHTML = '';
-        }
-
-        function populateGameSidebarLetters() {
-            const container = document.getElementById('gameSidebarLetters');
-            container.innerHTML = '';
-            const allChars = ['0','1','2','3','4','5','6','7','8','9',
-                'A','B','C','D','E','F','G','H','I','J','K','L','M',
-                'N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-            allChars.forEach(char => {
-                const section = document.getElementById(`section-${char}`);
-                const btn = document.createElement('button');
-                btn.className = 'game-sidebar-btn';
-                btn.textContent = char;
-                if (!section || section.classList.contains('empty')) {
-                    btn.classList.add('empty');
-                } else {
-                    btn.onclick = () => {
-                        closeGame();
-                        setTimeout(() => {
-                            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }, 50);
-                    };
-                }
-                container.appendChild(btn);
-            });
-        }
-
-        function onGameSearch(query) {
-            const resultsEl = document.getElementById('gameSearchResults');
-            resultsEl.innerHTML = '';
-            if (!query.trim()) return;
-            const q = query.toLowerCase();
-            const matches = files.filter(f => f.toLowerCase().includes(q)).slice(0, 30);
-            matches.forEach(file => {
-                const item = document.createElement('div');
-                item.className = 'game-search-item';
-                item.textContent = file.replace(/^cl/i, '');
-                item.onclick = () => {
-                    addXP(xpPerGame());
-                    recordRecentGame(file);
-                    launchGame(file);
-                };
-                resultsEl.appendChild(item);
-            });
-            if (matches.length === 0) {
-                const none = document.createElement('div');
-                none.style.color = 'rgba(255,255,255,0.3)';
-                none.style.fontSize = '13px';
-                none.style.padding = '8px';
-                none.textContent = 'No games found';
-                resultsEl.appendChild(none);
-            }
-        }
-
-        // Also wire up the main search bar to use launchGame
-        document.addEventListener('DOMContentLoaded', () => {
-            const searchBox = document.getElementById('searchBox');
-            if (searchBox) {
-                searchBox.addEventListener('input', function() {
-                    const q = this.value.toLowerCase();
-                    const resultsEl = document.getElementById('searchResults');
-                    resultsEl.innerHTML = '';
-                    if (!q.trim()) return;
-                    const matches = files.filter(f => f.toLowerCase().includes(q)).slice(0, 30);
-                    matches.forEach(file => {
-                        const item = document.createElement('div');
-                        item.className = 'search-item';
-                        item.textContent = file.replace(/^cl/i, '');
-                        item.onclick = () => {
-                            addXP(xpPerGame());
-                            recordRecentGame(file);
-                            launchGame(file);
-                        };
-                        resultsEl.appendChild(item);
-                    });
-                });
-            }
-        });
 
         document.addEventListener("DOMContentLoaded", renderPinnedGames);
 
@@ -1567,10 +1195,16 @@
             recent.forEach(file => {
                 const card = document.createElement('div');
                 card.className = 'recent-card';
-                card.textContent = '▶ ' + file.replace(/^cl/i, '');
+                card.textContent = '▶ ' + file;
                 card.onclick = () => {
                     recordRecentGame(file);
-                    launchGame(file);
+                    const url = getGameDownloadUrl(file);
+                    fetch(url)
+                        .then(r => r.text())
+                        .then(t => {
+                            const w = window.open('about:blank', '_blank');
+                            if (w) { w.document.open(); w.document.write(t); w.document.close(); }
+                        });
                 };
                 container.appendChild(card);
             });
